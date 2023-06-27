@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/Alll3x/pokeback#readme",
   "dependencies": {
+    "@prisma/client": "^4.16.1",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "prisma": "^4.16.1"
   }
 }

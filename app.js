@@ -9,7 +9,7 @@
 // Rotas
   // Main
     app.get('/', (req, res) => {
-      res.send('Okay')
+      res.send('ogay')
     })
 
 // Server
