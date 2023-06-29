@@ -23,7 +23,7 @@
 
 ### Comands
 #### _Prisma Migrate_ 
-npx prisma migrate dev --name "NAME"
+  npx prisma migrate dev --name "NAME"
 
 ### Routes Map
 - _/register_: user register
