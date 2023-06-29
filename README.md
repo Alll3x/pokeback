@@ -19,10 +19,12 @@
 - _Pokemon Api_: https://pokeapi.co/docs/v2#pokemon-section 
 
 ### Tutorials 
-- _API usando NODEJS, PRISMA e DOCKER_:https://www.youtube.com/watch?v=gnq8ZY85UUM
+- _API usando NODEJS, PRISMA e DOCKER_: https://www.youtube.com/watch?v=gnq8ZY85UUM
 
 ### Comands
-_Prisma Migrate_: npx prisma migrate dev --name "NAME"
+- _Prisma Migrate_: 
+npx prisma migrate dev --name "NAME"
 
 ### Routes Map
 - _/register_: user register
+- _/login_ : user login
