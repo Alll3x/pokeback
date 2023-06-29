@@ -6,9 +6,21 @@ const createUser = async (data) => {
     select:{
       id: true,
       name: true,
-      last_name: false,
-      cpf: true,
-      created_at: true
+      email: true,
+      nickname: true,
+      password: true,
+      status: true,
+      created_at: true,
+      updated_at: true
+    }
+  })
+  return user
+}
+
+const getByEmail = async (email) => {
+  const user = await prisma.user.findUnique({
+    where:{
+      email
     }
   })
   return user
@@ -20,12 +32,16 @@ const getAll = async () => {
 }
 
 const getById = async (id) => {
-  const user = await prisma.user.findUnique({
-    where:{
-      id
-    }
-  })
-  return user
+  try {
+    const user = await prisma.user.findUnique({
+      where:{
+        id
+      }
+    })
+    return user
+  } catch (error) {
+    return error
+  }
 }
 
 const updateUser = async (id, data) => {
@@ -47,4 +63,4 @@ const deleteUser = async (id) => {
   return
 }
 
-module.exports = { createUser, getAll, getById, updateUser, deleteUser }
+module.exports = { createUser, getAll, getById, getByEmail }

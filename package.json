@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "attDb": "npm run dev && npx prisma migrate dev --name init"
+
   },
   "repository": {
     "type": "git",
