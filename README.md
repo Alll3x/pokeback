@@ -22,8 +22,8 @@
 - _API usando NODEJS, PRISMA e DOCKER_: https://www.youtube.com/watch?v=gnq8ZY85UUM
 
 ### Comands
-#### _Prisma Migrate_ 
-  npx prisma migrate dev --name "NAME"
+  #### _Prisma Migrate_ 
+    npx prisma migrate dev --name "NAME"
 
 ### Routes Map
 - _/register_: user register
