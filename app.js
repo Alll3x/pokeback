@@ -1,18 +1,12 @@
-// Modules
-  const express = require('express')
-// Configs
-  // Express
-    const app = express()
-          app.use(express.json())
-  //DotEnv
-    require('dotenv').config();
-// Rotas
-  // Main
-    app.get('/', (req, res) => {
-      res.send('ogay')
-    })
+const express = require('express')
+const cors = require('cors')
+const routes = require('./routes/index.js')
+const app = express()
+      app.use(express.json())
+      app.use(cors())
+require('dotenv').config();
+routes(app)
 
-// Server
 app.listen(process.env.PORT, ()=>{
   try {
     console.log(`Server runnig on: ${process.env.URL}${process.env.PORT}`)

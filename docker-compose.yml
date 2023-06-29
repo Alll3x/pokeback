@@ -5,10 +5,11 @@ services:
     image: mysql:latest
     ports:
       - "3306:3306"
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: PokeProject
       MYSQL_USER: user
       MYSQL_PASSWORD: user
     volumes:
-      - ./data:/var/lib/mysql
+      - ./data:/var/lib/mysql 
