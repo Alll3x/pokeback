@@ -5,7 +5,8 @@ const bcrypt = require('bcrypt')
 const create = async (req, res) => {
   try {
     await createUserValidation.validate(req.body)
-    const encrypted = await bcrypt.hash(req.body.password, 10)
+    const randon = await parseInt(Math.random() * 12)
+    const encrypted = await bcrypt.hash(req.body.password, randon)
     req.body.password = encrypted
     const user = await createUser(req.body)
     res.status(200).send("Usuário realizado com sucesso !")
@@ -18,10 +19,12 @@ const verifyLogin = async (req, res) => {
   try {
     await loginValidation.validate(req.body)
     const user = await getByEmail(req.body.email)
-    if(await verifyAttempToLogin(req.body.password, user)){
-      res.status(200).send('Login realizado com sucesso')
+    const randon = await parseInt(Math.random() * 12) 
+    const token = await bcrypt.hash(user.nickname, randon)
+    if(await verifyAttempToLogin(req.body.password, user) && user.status){
+      res.status(200).send(`Login realizado com sucesso ${token}`)
     }else{
-      res.status(200).send('Email ou senha incorretos, verifique !')
+      res.status(400).send('Email ou senha incorretos, verifique !')
     }
   } catch (error) {
    res.status(400).send(error) 
