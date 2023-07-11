@@ -20,6 +20,8 @@ model Team {
   id         Int      @id @default(autoincrement())
   user       User     @relation(fields: [id_user], references: [id])
   id_user    Int
+  teamName   String
+  pokemons   String
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt()
   

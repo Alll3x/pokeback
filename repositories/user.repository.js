@@ -2,17 +2,7 @@ const { prisma } = require ('../prisma/prisma')
 
 const createUser = async (data) => {
   const user = await prisma.user.create({
-    data,
-    select:{
-      id: true,
-      name: true,
-      email: true,
-      nickname: true,
-      password: true,
-      status: true,
-      created_at: true,
-      updated_at: true
-    }
+    data
   })
   return user
 }
