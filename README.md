@@ -3,6 +3,7 @@
 O projeto ou pokeproject tem o propósito de servir como portifólio, e material de estudo. Consumindo uma api de pokemons é possível criar uma conta, pesquisar os pokemons, e ver todas as suas informações, como estástisticas, natures, ataques e variações. Pode-se adicionar um pokemon a uma lista de favoritos, além disso é possível montar times com várias combinações dos monstrinhos.
   ## Purpose of Project
 The project or pokeproject is intended to serve as a portfolio and study material. Consuming a pokemons api it is possible to create an account, search for pokemons, and see all their information, such as statistics, natures, attacks and variations. You can add a pokemon to a favorites list, in addition it is possible to assemble teams with various combinations of the little monsters.
+
 ## For Devs
   ### Apis/ Libs Documentation
 - _Node_: https://nodejs.org/en/docs
