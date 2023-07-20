@@ -33,12 +33,12 @@ The project or pokeproject is intended to serve as a portfolio and study materia
 
 ### Routes Map
   #### Get
-    /users: get all user
-    /user/:id: get user by id
-    /team/:id: get team by id
-    /pokemon/:idOrName: get pokemon by id or name  
+- /users: get all user
+- /user/:id: get user by id
+- /team/:id: get team by id
+- /pokemon/:idOrName: get pokemon by id or name  
 
   #### Post 
-    /register: user register
-    /login: user login
-    /createTeam: create team
+- /register: user register
+- /login: user login
+- /createTeam: create team
