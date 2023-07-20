@@ -37,7 +37,6 @@ The project or pokeproject is intended to serve as a portfolio and study materia
 - _/user/:id_: get user by id
 - _/team/:id_: get team by id
 - _/pokemon/:idOrName_: get pokemon by id or name  
-
   #### Post 
 - _/register_: user register
 - _/login_: user login
